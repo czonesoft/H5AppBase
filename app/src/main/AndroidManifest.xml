@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xiaoyaolvxing.WskSp">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <!-- Barcode(二维码)  begin -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <!-- Barcode(二维码)  end -->
+
+
+    <!-- Maps(地图) begin -->
+    <!-- Maps - 百度地图 begin -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--<uses-permission android:name="android.permission.WRITE_SETTINGS" />-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />-->
+    <!--<uses-permission android:name="android.permission.READ_LOGS" />-->
+    <!-- Maps(地图) end -->
+
+    <!-- Push(推送)-个推  begin -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="getui.permission.GetuiService.com.xiaoyaolvxing.WskSp" />
+
+    <permission
+        android:name="getui.permission.GetuiService.com.xiaoyaolvxing.WskSp"
+        android:protectionLevel="normal" />
+
+    <!-- Push(推送)-个推    end -->
+
+    <!-- Share(分享)  begin -->
+    <!-- Share - 新浪微博分享 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Share - 腾讯微博分享 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />-->
+
+    <!-- Share - 微信分享 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- Share(分享)   end -->
+
+    <!-- Speech(语音识别)  begin -->
+    <!-- Speech - 讯飞语音云 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- Speech(语音识别)  end -->
+
+
+    <!-- Statistic(统计)  begin -->
+    <!-- Statistic - 友盟统计 -->
+    <!--<uses-permission android:name="android.permission.READ_LOGS" />-->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <!-- Statistic(统计)  end -->
+
+    <application
+        android:name="io.dcloud.application.DCloudApplication"
+        android:allowBackup="true"
+        android:allowClearUserData="true"
+        android:label="微收客商家版"
+        android:icon="@drawable/icon"
+        android:supportsRtl="true"
+        android:largeHeap="true">
+        <!--<activity
+            android:name="io.dcloud.PandoraEntry"
+            android:configChanges="orientation|keyboardHidden|keyboard|navigation"
+            android:launchMode="singleTask"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="user"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/TranslucentTheme"
+            >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>-->
+    <!-- Runtime集成方式基本配置 start-->
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|navigation|screenSize|mcc|mnc|fontScale"
+            android:label="微收客商家版"
+            android:launchMode="singleTask"
+            android:hardwareAccelerated="true"
+            android:theme="@style/TranslucentTheme"
+            android:screenOrientation="user"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="io.dcloud.PandoraEntryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:label="5+Debug"
+            android:launchMode="singleTask"
+            android:screenOrientation="user"
+            android:theme="@style/DCloudTheme"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+
+        <!-- 微信分享 配置begin -->
+        <meta-data android:name="WX_APPID" android:value="wxd180e94591e352eb">
+        </meta-data>
+        <meta-data android:name="WX_SECRET" android:value="b9fb495ee99e30d4251a01bf123302e5">
+        </meta-data>
+        <activity
+            android:name="com.xiaoyaolvxing.WskSp.wxapi.WXEntryActivity"
+            android:label="@string/app_name"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="wxd180e94591e352eb"/>
+            </intent-filter>
+        </activity>
+        <!-- 微信分享 配置 end -->
+
+        <!-- Push(推送)-个推 begin -->
+        <!-- 官方网站：http://www.igetui.com/ -->
+        <!-- meta-data节点android:name="appid"项中android:value值为个推服务器上申请的APPID -->
+        <!-- meta-data节点android:name="appkey"项中android:value值为个推服务器上申请的APPKEY -->
+        <!-- meta-data节点android:name="appsecret"项中android:value值为个推服务器上申请的APPSECRET -->
+        <!-- 个推 aps配置  begin -->
+        <meta-data
+            android:name="PUSH_APPID"
+            android:value="Figd7AREWv9XZeDshJqTuA" />
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="qM3bfn3X2i6glgAuHEa5g" />
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="72AIwwOhgM9yr8zMoXuNM3" />
+
+        <service
+            android:name="com.igexin.sdk.PushService"
+            android:exported="true"
+            android:label="NotificationCenter"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.service.message" />
+            </intent-filter>
+        </service>
+        <receiver android:name="com.igexin.sdk.PushReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.igexin.sdk.action.refreshls" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.igexin.sdk.PushActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.igexin.sdk.GActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver android:name="io.dcloud.feature.apsGt.GTNotificationReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.xiaoyaolvxing.WskSp.__CREATE_NOTIFICATION" />
+                <action android:name="com.xiaoyaolvxing.WskSp.__REMOVE_NOTIFICATION" />
+                <action android:name="com.xiaoyaolvxing.WskSp.__CLEAR_NOTIFICATION" />
+                <action android:name="com.xiaoyaolvxing.WskSp.__CLILK_NOTIFICATION" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="io.dcloud.feature.apsGt.GTNormalIntentService"/>
+        <service
+            android:name="io.dcloud.feature.apsGt.GTNormalPushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice" />
+
+        <!-- Push(推送)-个推  end -->
+
+        <service
+            android:name="io.dcloud.common.adapter.io.MiniServerService"
+            android:exported="false" />
+        <!-- Runtime集成方式基本配置 end-->
+    </application>
+
+</manifest>
